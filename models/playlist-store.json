@@ -1,0 +1,68 @@
+{
+  "playlistCollection": [
+    {
+      "title": "Beethoven Sonatas",
+      "songs": [
+        {
+          "id": "01",
+          "title": "Piano Sonata No. 3",
+          "artist": "Beethoven",
+          "duration": "3",
+          "genre": "Classical"
+        },
+        {
+          "id": "02",
+          "title": "Piano Sonata No. 7",
+          "artist": "Beethoven",
+          "duration": "3",
+          "genre": "Classical"
+        },
+        {
+          "id": "03",
+          "title": "Piano Sonata No. 10",
+          "artist": "Beethoven",
+          "duration": "3",
+          "genre": "Classical"
+        }
+      ]
+    },
+    {
+      "title": "Beethoven Concertos",
+      "songs": [
+        {
+          "id": "04",
+          "title": "Piano Concerto No. 0",
+          "artist": "Beethoven",
+          "duration": "3",
+          "genre": "Classical"
+        },
+        {
+          "id": "05",
+          "title": "Piano Concerto No. 4",
+          "artist": "Beethoven",
+          "duration": "3",
+          "genre": "Classical"
+        },
+        {
+          "id": "06",
+          "title": "Piano Concerto No. 6",
+          "artist": "Beethoven",
+          "duration": "3",
+          "genre": "Classical"
+        }
+      ]
+    },
+    {
+      "title": "Oasis Songs",
+      "songs": [
+        {
+          "id": "07",
+          "title": "Acquiesce",
+          "artist": "Oasis",
+          "duration": "3",
+          "genre": "BritPop"
+        }
+      ]
+    }
+  ]
+}

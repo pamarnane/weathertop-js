@@ -1,8 +1,38 @@
 {{> menu id="dashboard"}}
 
-<section class="ui segment">
-  <h2 class="ui header">
-    Playlist Title
-  </h2>
-    {{> listsongs}}
-</section>
+{{#each playlists}}
+  <section class="ui segment">
+    <h2 class="ui header">
+      {{title}}
+    </h2>
+    <table class="ui table">
+      <thead>
+        <tr>
+          <th>Song</th>
+          <th>Artist</th>
+          <th>Duration</th>
+          <th>Genre</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {{#each songs}}
+          <tr>
+            <td>
+              {{title}}
+            </td>
+            <td>
+              {{artist}}
+            </td>
+            <td>
+              {{duration}}
+            </td>
+            <td>
+              {{genre}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </section>
+{{/each}}
