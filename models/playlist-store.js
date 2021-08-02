@@ -1,5 +1,6 @@
 'use strict';
 
+const _ = require('lodash');
 
 const playlistStore = {
 
@@ -10,21 +11,17 @@ const playlistStore = {
   },
 
   getPlaylist(id) {
-    let foundPlaylist = null;
-    for (let playlist of this.playlistCollection) {
-      if (id == playlist.id) {
-        foundPlaylist = playlist;
-      }
-    }
-
-    return foundPlaylist;
+  	return _.find(this.playlistCollection, { id: id });
   },
   
   removeSong(id, songId) {
     const playlist = this.getPlaylist(id);
-
-    // TODO : remove the song with id songId from the playlist
+    _.remove(playlist.songs, { id: songId });
   },
+  
+  removePlaylist(id) {
+  _.remove(this.playlistCollection, { id: id });
+},
 };
 
 module.exports = playlistStore;
