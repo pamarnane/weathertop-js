@@ -30,6 +30,7 @@ const playlist = {
       id: uuid.v1(),
       title: request.body.title,
       artist: request.body.artist,
+      duration: request.body.duration,
     };
     playlistStore.addSong(playlistId, newSong);
     response.redirect('/playlist/' + playlistId);

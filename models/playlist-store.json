@@ -27,9 +27,10 @@
           "duration": 4
         },
         {
-          "id": "6020a4e0-f3be-11eb-ac1b-8f0f07aa9262",
+          "id": "7b675f00-f3be-11eb-a4f5-37ac31fb9902",
           "title": "Test",
-          "artist": "Me "
+          "artist": "Me",
+          "duration": "3"
         }
       ]
     },
