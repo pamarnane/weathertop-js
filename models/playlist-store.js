@@ -1,5 +1,6 @@
 'use strict';
 
+
 const playlistStore = {
 
   playlistCollection: require('./playlist-store.json').playlistCollection,
@@ -17,6 +18,12 @@ const playlistStore = {
     }
 
     return foundPlaylist;
+  },
+  
+  removeSong(id, songId) {
+    const playlist = this.getPlaylist(id);
+
+    // TODO : remove the song with id songId from the playlist
   },
 };
 
