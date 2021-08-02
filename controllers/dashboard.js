@@ -14,7 +14,12 @@ const dashboard = {
     response.render("dashboard", viewData);
   },
   
-  
+  deletePlaylist(request, response) {
+    const playlistId = request.params.id;
+    logger.info(`Deleting Playlist ${playlistId}`);
+    playlistStore.removePlaylist(playlistId);
+    response.redirect('/dashboard');
+  },
 };
 
 module.exports = dashboard;

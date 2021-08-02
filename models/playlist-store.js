@@ -22,6 +22,10 @@ const playlistStore = {
   removePlaylist(id) {
   _.remove(this.playlistCollection, { id: id });
 },
+  
+  removePlaylist(id) {
+  _.remove(this.playlistCollection, { id: id });
+},
 };
 
 module.exports = playlistStore;
