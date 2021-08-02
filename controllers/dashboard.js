@@ -8,7 +8,7 @@ const dashboard = {
     logger.info("dashboard rendering");
     const viewData = {
       title: "Template 1 Dashboard",
-      playlists: playlistcollection
+      playlists: playlistStore.getAllPlaylists()
     };
     logger.info('about to render', playlistcollection)
     response.render("dashboard", viewData);
