@@ -2,6 +2,7 @@
 
 const express = require("express");
 const router = express.Router();
+const song = require("./controllers/song.js");
 
 const dashboard = require("./controllers/dashboard.js");
 const about = require("./controllers/about.js");
@@ -24,5 +25,8 @@ router.get('/signup', accounts.signup);
 router.get('/logout', accounts.logout);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
+
+router.get("/song/:id/editsong/:songid", song.index);
+router.post("/song/:id/updatesong/:songid", song.update);
 
 module.exports = router;

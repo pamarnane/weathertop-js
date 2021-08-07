@@ -4,7 +4,15 @@
       "id": "78277ca0-f3c6-11eb-b24f-959bf751071a",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "title": "Test",
-      "songs": []
+      "songs": [
+        {
+          "id": "29b84a80-f750-11eb-b744-cbc3be9547db",
+          "title": "Hello",
+          "artist": "Me",
+          "duration": 3
+        }
+      ],
+      "duration": 2
     },
     {
       "id": "839b0160-f3c6-11eb-b24f-959bf751071a",

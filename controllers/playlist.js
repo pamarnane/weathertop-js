@@ -8,6 +8,10 @@ const playlist = {
   index(request, response) {
     const playlistId = request.params.id;
     logger.info('Playlist id = ' + playlistId);
+    
+    
+    
+    
     const viewData = {
       title: 'Playlist',
       playlist: playlistStore.getPlaylist(playlistId)
