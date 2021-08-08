@@ -1,7 +1,7 @@
 "use strict";
 
 const logger = require("../utils/logger");
-const playlistStore = require("../models/playlist-store");
+const playlistStore = require("../models/station-store");
 
 const song = {
   index(request, response) {

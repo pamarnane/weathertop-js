@@ -1,7 +1,7 @@
 "use strict";
 
 const logger = require("../utils/logger");
-const playlistStore = require('../models/playlist-store.js');
+const stationStore = require('../models/station-store.js');
 const uuid = require('uuid');
 const accounts = require ('./accounts.js');
 
@@ -10,29 +10,31 @@ const dashboard = {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
     const viewData = {
-      title: "Playlist Dashboard",
-      playlists: playlistStore.getUserPlaylists(loggedInUser.id),
+      title: "Station Dashboard",
+      stations: stationStore.getUserStations(loggedInUser.id),
     };
-    logger.info('about to render', playlistStore.getUserPlaylists(loggedInUser.id));
+    logger.info('about to render', stationStore.getUserStations(loggedInUser.id));
     response.render("dashboard", viewData);
   },
   
-  deletePlaylist(request, response) {
-    const playlistId = request.params.id;
-    logger.info(`Deleting Playlist ${playlistId}`);
-    playlistStore.removePlaylist(playlistId);
+  deleteStation(request, response) {
+    const stationId = request.params.id;
+    logger.info(`Deleting Playlist ${stationId}`);
+    stationStore.removeStation(stationId);
     response.redirect('/dashboard');
   },
   
-    addPlaylist(request, response) {
+    addStation(request, response) {
       const loggedInUser = accounts.getCurrentUser(request);
-      const newPlayList = {
+      const newStation = {
         id: uuid.v1(),
         userid: loggedInUser.id,
-        title: request.body.title,
-        songs: [],
+        location: request.body.location,
+        lat: Number(request.body.lat),
+        lng: Number(request.body.lng),
+        readings: []
     };
-    playlistStore.addPlaylist(newPlayList);
+    stationStore.addStation(newStation);
     response.redirect('/dashboard');
   },
 };

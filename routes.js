@@ -6,18 +6,18 @@ const song = require("./controllers/song.js");
 
 const dashboard = require("./controllers/dashboard.js");
 const about = require("./controllers/about.js");
-const playlist = require("./controllers/playlist.js");
+const station = require("./controllers/station.js");
 const accounts = require('./controllers/accounts.js');
 
 router.get("/dashboard", dashboard.index);
 router.get("/about", about.index);
-router.get("/playlist/:id", playlist.index);
+router.get("/station/:id", station.index);
 
-router.post("/playlist/:id/addsong", playlist.addSong);
-router.post('/dashboard/addplaylist', dashboard.addPlaylist);
+router.post("/station/:id/addreading", station.addReading);
+router.post('/dashboard/addstation', dashboard.addStation);
 
-router.get("/playlist/:id/deletesong/:songid", playlist.deleteSong);
-router.get("/dashboard/deleteplaylist/:id", dashboard.deletePlaylist);
+router.get("/station/:id/deletereading/:readingid", station.deleteReading);
+router.get("/dashboard/deletestation/:id", dashboard.deleteStation);
 
 router.get('/', accounts.index);
 router.get('/login', accounts.login);
