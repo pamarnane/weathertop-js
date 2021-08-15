@@ -43,7 +43,7 @@ const accounts = {
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);
     if ((user) && (request.body.password === user.password)) {
-      response.cookie('playlist', user.email);
+      response.cookie('station', user.email);
       logger.info(`logging in ${user.email}`);
       response.redirect('/dashboard');
     } else {
@@ -52,9 +52,33 @@ const accounts = {
   },
 
   getCurrentUser(request) {
-    const userEmail = request.cookies.playlist;
+    const userEmail = request.cookies.station;
     return userstore.getUserByEmail(userEmail);
   },
+
+  account(request, response) {
+    //const userEmail = request.cookies.station;
+    const userDetails = userstore.getUserByEmail(request.cookies.station);
+    const viewData = {
+      title: 'Update Account Details',
+      member: userDetails
+    };
+    response.render('accounts', viewData);
+  },
+
+  update(request, response){
+    const userDetails = userstore.getUserByEmail(request.cookies.station);
+    const updatedDetails = {
+      firstName: request.body.firstname,
+      lastName: request.body.lastname,
+      email: request.body.email,
+      password: request.body.password
+    }
+
+    userstore.updateAccount(userDetails, updatedDetails);
+    response.redirect('/dashboard');
+  }
+
 };
 
 module.exports = accounts;

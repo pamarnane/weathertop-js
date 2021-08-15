@@ -1,10 +1,15 @@
 {{> menu}}
 
-<section class="ui center aligned middle aligned segment">
-  <h2 class="ui header">
-    {{station.location}}
-  </h2>
+<section class="ui segment">
+  {{#if station.readings}}
   {{> stationcards}}
   {{> listreadings}}
+
+{{else}}
+  <h2 class="ui header">
+    {{location}}
+  </h2>
+  <h3>No readings entered yet</h3>
+{{/if}}
   {{> addreading}}
 </section>

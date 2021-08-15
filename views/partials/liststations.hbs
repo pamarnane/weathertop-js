@@ -1,14 +1,21 @@
 {{#each stations}}
   <section class="ui stacked segment">
-    {{> stationcards}}
-    <h2 class="ui header">
-      {{location}}
-    </h2>
-    <a href="/station/{{id}}" class="ui icon button">
-      <i class="icon folder open"></i>
-    </a>
-    <a href="/dashboard/deletestation/{{id}}" class="ui icon button">
-      <i class="icon trash"></i>
-    </a>
+    {{#if readings.length}}
+      {{> stationcards}}
+      <h2 class="ui header">
+        {{location}}
+      </h2>
+    {{else}}
+      <h2 class="ui header">
+        {{location}}
+      </h2>
+      <h3>No readings entered yet</h3>
+    {{/if}}
+      <a href="/station/{{id}}" class="ui icon button">
+        <i class="icon folder open"></i>
+      </a>
+      <a href="/dashboard/deletestation/{{id}}" class="ui icon button">
+        <i class="icon trash"></i>
+      </a>
   </section>
 {{/each}}

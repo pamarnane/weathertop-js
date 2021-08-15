@@ -11,12 +11,15 @@ const station = {
     logger.info('Playlist id = ' + stationId);
     
     const station = stationStore.getStation(stationId);
-    const lowestTemp = stationSummary.getLowestTemp(station);
-    
+    const summary = station.summary;
+
     const viewData = {
-      title: 'Station',
+      title: station.location,
+      location: station.location,
+      lat: station.lat,
+      lng: station.lng,
       station: stationStore.getStation(stationId),
-      lowestTemp: lowestTemp
+      summary: summary
     };
     response.render('station', viewData);
   },
@@ -41,9 +44,9 @@ const station = {
       pressure: Number(request.body.pressure),
       windDirection: Number(request.body.windDirection),
       date: currentTime,
-      //duration: Number(request.body.duration),
     };
     stationStore.addReading(stationId, newReading);
+    //stationStore.updateSummary(stationId);
     response.redirect('/station/' + stationId);
   },
 };

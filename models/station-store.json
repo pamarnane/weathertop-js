@@ -1,47 +1,189 @@
 {
   "stationCollection": [
     {
-      "id": "51d11d30-f83b-11eb-a572-694b898f684d",
+      "id": "c53dffd0-fbb1-11eb-8cf0-7fadd73865cb",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "location": "Ennis",
-      "lat": "12",
-      "lng": "12"
+      "lat": 23.5,
+      "lng": 34.6,
+      "readings": [],
+      "summary": {
+        "weatherDesc": "Clear",
+        "weatherIcon": "sun icon",
+        "tempC": 32,
+        "maxTempC": 32,
+        "minTempC": 32,
+        "tempF": 89.6,
+        "windBft": 5,
+        "windDirectionString": "North North East",
+        "windChill": 22.22,
+        "maxWindSpd": 32,
+        "minWindSpd": 32,
+        "pressure": 32,
+        "maxPressure": 32,
+        "minPressure": 32
+      }
     },
     {
-      "id": "4a3f5490-f83d-11eb-8752-bb5075fc337a",
-      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "location": "Ennis",
-      "lat": "32",
-      "lng": "32",
+      "id": "0f8f3fe0-fcf7-11eb-a4ba-0b914355b0b5",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "location": "Bansha",
+      "lat": 52.4482,
+      "lng": 8.0643,
       "readings": [
         {
-          "id": "297e38c0-f842-11eb-9a1e-b7354cb6f025",
-          "code": "100",
-          "temperature": 12.3,
-          "windSpeed": 2.6,
-          "pressure": 1001,
-          "windDirection": 23,
-          "date": "2021-08-08T12:14:21.260Z"
+          "id": "ab68b910-fcfb-11eb-a4ba-0b914355b0b5",
+          "code": 100,
+          "temperature": 12,
+          "windSpeed": 21,
+          "pressure": 12,
+          "windDirection": 12,
+          "date": "2021-08-14T12:32:20.769Z"
         },
         {
-          "id": "4b473560-f842-11eb-9a1e-b7354cb6f025",
-          "code": "100",
-          "temperature": 12.7,
+          "id": "ae27d910-fcfb-11eb-a4ba-0b914355b0b5",
+          "code": 100,
+          "temperature": 32,
+          "windSpeed": 32,
+          "pressure": 32,
+          "windDirection": 32,
+          "date": "2021-08-14T12:32:25.377Z"
+        },
+        {
+          "id": "7c891990-fcfc-11eb-a4ba-0b914355b0b5",
+          "code": 400,
+          "temperature": 23,
+          "windSpeed": 67,
+          "pressure": 998,
+          "windDirection": 65,
+          "date": "2021-08-14T12:38:11.625Z"
+        },
+        {
+          "id": "88c9d960-fcfc-11eb-b968-053569c3bff2",
+          "code": 100,
+          "temperature": 23,
           "windSpeed": 23,
           "pressure": 23,
-          "windDirection": 32,
-          "date": "2021-08-08T12:15:17.942Z"
+          "windDirection": 23,
+          "date": "2021-08-14T12:38:32.182Z"
         },
         {
-          "id": "4f0ec4b0-f842-11eb-9a1e-b7354cb6f025",
-          "code": "100",
-          "temperature": 1.5,
-          "windSpeed": 3,
-          "pressure": 3,
-          "windDirection": 3,
-          "date": "2021-08-08T12:15:24.283Z"
+          "id": "c5bb32b0-fcfc-11eb-b968-053569c3bff2",
+          "code": 100,
+          "temperature": 23,
+          "windSpeed": 23,
+          "pressure": 23,
+          "windDirection": 23,
+          "date": "2021-08-14T12:40:14.427Z"
+        },
+        {
+          "id": "c88d6580-fcfc-11eb-b312-618232cb9f22",
+          "code": 100,
+          "temperature": 23,
+          "windSpeed": 23,
+          "pressure": 23,
+          "windDirection": 23,
+          "date": "2021-08-14T12:40:19.160Z"
+        },
+        {
+          "id": "e5be1550-fcfc-11eb-9bd3-71a88cb82ee5",
+          "code": 100,
+          "temperature": 23,
+          "windSpeed": 23,
+          "pressure": 23,
+          "windDirection": 23,
+          "date": "2021-08-14T12:41:08.133Z"
         }
-      ]
+      ],
+      "summary": {
+        "weatherDesc": "Clear",
+        "weatherIcon": "sun icon",
+        "tempC": 23,
+        "maxTempC": 32,
+        "minTempC": 12,
+        "tempF": 73.4,
+        "windBft": 4,
+        "windDirectionString": "North North East",
+        "windChill": 15.15,
+        "maxWindSpd": 67,
+        "minWindSpd": 21,
+        "pressure": 23,
+        "maxPressure": 998,
+        "minPressure": 12
+      }
+    },
+    {
+      "id": "3b0bf290-fd28-11eb-82a2-dfb5343c855f",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "location": "Tipperary",
+      "lat": 54,
+      "lng": 8,
+      "readings": [
+        {
+          "id": "32bb7190-fd9d-11eb-9aca-0fa5d4c0b725",
+          "code": 100,
+          "temperature": 12,
+          "windSpeed": 5,
+          "pressure": 1001,
+          "windDirection": 187,
+          "date": "2021-08-15T07:48:36.777Z"
+        },
+        {
+          "id": "3a584bd0-fd9d-11eb-9aca-0fa5d4c0b725",
+          "code": 200,
+          "temperature": 23,
+          "windSpeed": 2,
+          "pressure": 999,
+          "windDirection": 234,
+          "date": "2021-08-15T07:48:49.549Z"
+        },
+        {
+          "id": "5187a8f0-fd9d-11eb-9aca-0fa5d4c0b725",
+          "code": 600,
+          "temperature": 1,
+          "windSpeed": 23,
+          "pressure": 1005,
+          "windDirection": 87,
+          "date": "2021-08-15T07:49:28.447Z"
+        },
+        {
+          "id": "5eb4eba0-fd9d-11eb-9aca-0fa5d4c0b725",
+          "code": 200,
+          "temperature": 23,
+          "windSpeed": 8,
+          "pressure": 1003,
+          "windDirection": 107,
+          "date": "2021-08-15T07:49:50.554Z"
+        },
+        {
+          "id": "c6efb6a0-fda2-11eb-99ba-a325cde3eb4a",
+          "code": 100,
+          "temperature": 13,
+          "windSpeed": 32,
+          "pressure": 999,
+          "windDirection": 56,
+          "date": "2021-08-15T08:28:32.905Z"
+        }
+      ],
+      "summary": {
+        "weatherDesc": "Clear",
+        "weatherIcon": "sun icon",
+        "tempC": 13,
+        "maxTempC": 23,
+        "minTempC": 1,
+        "tempF": 55.4,
+        "windBft": 5,
+        "windDirectionString": "North East",
+        "windChill": 8.99,
+        "maxWindSpd": 32,
+        "minWindSpd": 2,
+        "pressure": 999,
+        "maxPressure": 1005,
+        "minPressure": 999,
+        "tempTrend": "arrow up icon",
+        "windTrend": "arrow up icon",
+        "pressTrend": "arrow up icon"
+      }
     }
   ]
 }

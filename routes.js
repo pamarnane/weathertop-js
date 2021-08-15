@@ -2,7 +2,7 @@
 
 const express = require("express");
 const router = express.Router();
-const song = require("./controllers/song.js");
+//const song = require("./controllers/song.js");
 
 const dashboard = require("./controllers/dashboard.js");
 const about = require("./controllers/about.js");
@@ -20,13 +20,15 @@ router.get("/station/:id/deletereading/:readingid", station.deleteReading);
 router.get("/dashboard/deletestation/:id", dashboard.deleteStation);
 
 router.get('/', accounts.index);
+router.get('/accounts', accounts.account);
 router.get('/login', accounts.login);
 router.get('/signup', accounts.signup);
 router.get('/logout', accounts.logout);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
+router.post('/accounts/:id/update', accounts.update);
 
-router.get("/song/:id/editsong/:songid", song.index);
-router.post("/song/:id/updatesong/:songid", song.update);
+//router.get("/song/:id/editsong/:songid", song.index);
+//router.post("/song/:id/updatesong/:songid", song.update);
 
 module.exports = router;

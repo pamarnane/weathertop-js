@@ -2,6 +2,7 @@
 
 const _ = require('lodash');
 const JsonStore = require('./json-store');
+const stationSummary = require("../utils/station-summary");
 
 const stationStore = {
 
@@ -39,7 +40,7 @@ const stationStore = {
   addReading(id, reading) {
     const station = this.getStation(id);
     station.readings.push(reading);
-    
+
 /*    let duration = 0;
     for (let i = 0; i < playlist.songs.length; i++) {
       duration += playlist.songs[i].duration;
@@ -48,6 +49,7 @@ const stationStore = {
     // playlist.duration = duration;
     
     this.store.save();
+    this.updateSummary(id);
   },
 
   removeReading(id, readingId) {
@@ -55,6 +57,7 @@ const stationStore = {
     const readings = station.readings;
     _.remove(readings, { id: readingId});
     this.store.save();
+    this.updateSummary(id);
   },
   
   getReading(id, readingId) {
@@ -68,6 +71,36 @@ const stationStore = {
     reading.artist = updatedReading.artist;
     reading.duration = updatedReading.duration;
     this.store.save();
+  },
+
+  updateSummary(id) {
+    const station = this.getStation(id);
+    const i = station.readings.length - 1;
+
+    if (i >= 1) {
+    station.summary.minTempC = stationSummary.getMinTemp(station);
+    station.summary.maxTempC = stationSummary.getMaxTemp(station);
+    station.summary.weatherDesc = stationSummary.getWeatherString(station);
+    station.summary.weatherIcon = stationSummary.getWeatherIconMap(station);
+    station.summary.windBft = stationSummary.getWindBeaufort(station);
+    station.summary.windDirectionString = stationSummary.getWindDirection(station);
+    station.summary.windChill = stationSummary.getWindChill(station);
+    station.summary.minWindSpd = stationSummary.getMinWindSpd(station);
+    station.summary.maxWindSpd = stationSummary.getMaxWindSpd(station);
+    station.summary.minPressure = stationSummary.getMinPress(station);
+    station.summary.maxPressure = stationSummary.getMaxPress(station);
+    station.summary.tempF = stationSummary.getTempF(station);
+
+    station.summary.pressure = station.readings[i].pressure;
+    station.summary.tempC = station.readings[i].temperature;
+
+    const arrTrends = stationSummary.getTrends(station);
+    station.summary.tempTrend = arrTrends[0];
+    station.summary.windTrend = arrTrends[1];
+    station.summary.pressTrend = arrTrends[1];
+
+    this.store.save();
+    }
   }
 };
 

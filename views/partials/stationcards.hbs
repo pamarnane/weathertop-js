@@ -2,23 +2,20 @@
   <div class="ui background card" style="background-color: #0000000d">
     <div class="content">
       <i class="right floated huge green compass icon"></i>
-      <div class="header">{{_station.name}}</div>
+      <div class="header">{{location}}</div>
       <div class="description">
-        <p>Lat: {{station.lat}}</p>
-        <p>Lng: {{station.lng}}</p>
-        <p>Lng:
-              {{station.readings.0.date}}
-             </p>
+        <p>Lat: {{lat}}</p>
+        <p>Lng: {{lng}}</p>
+
       </div>
     </div>
   </div>
-  #{if _station.summary != null}
   <div class="ui card" style="background-color: #0000000d">
     <div class="content">
-      <i class="right floated huge red {{_station.summary.weatherIcon}}"></i>
+      <i class="right floated huge red {{summary.weatherIcon}}"></i>
       <div class="header">Weather</div>
       <div class="description">
-        <p>{{_station.summary.weatherDesc}}</p>
+        <p>{{summary.weatherDesc}}</p>
       </div>
     </div>
   </div>
@@ -27,11 +24,11 @@
       <i class="right floated huge yellow temperature low icon"></i>
       <div class="header">Temp</div>
       <div class="description">
-        <p>{{_station.summary.tempC}} degC</p>
-        <p>{{ _station.summary.tempF}} degF</p>
-        <i class="right floated blue {{_trendingVals?.tempTrend}}"></i>
-        <p>Max: {{_station.summary.maxTempC}} degC</p>
-        <p>Min: {{lowestTemp}} degC</p>
+        <p>{{summary.tempC}} degC</p>
+        <p>{{summary.tempF}} degF</p>
+        <i class="right floated blue {{summary.tempTrend}}"></i>
+        <p>Max: {{summary.maxTempC}} degC</p>
+        <p>Min: {{summary.minTempC}} degC</p>
       </div>
 
     </div>
@@ -41,12 +38,12 @@
       <i class="right floated grey huge wind icon"></i>
       <div class="header">Wind</div>
       <div class="description">
-        <p>{{_station.summary.windBft}} bft</p>
-        <p>{{_station.summary.windDirectionString}}</p>
-        <p>Feels like: {{_station.summary.windChill}} degC</p>
-        <i class="right floated blue {{_trendingVals?.windTrend}}"></i>
-        <p>Max: {{_station.summary.maxWindSpd}} km/hr</p>
-        <p>Min: {{_station.summary.minWindSpd}} km/hr</p>
+        <p>{{summary.windBft}} bft</p>
+        <p>{{summary.windDirectionString}}</p>
+        <p>Feels like: {{summary.windChill}} degC</p>
+        <i class="right floated blue {{summary.windTrend}}"></i>
+        <p>Max: {{summary.maxWindSpd}} km/hr</p>
+        <p>Min: {{summary.minWindSpd}} km/hr</p>
       </div>
     </div>
   </div>
@@ -56,13 +53,12 @@
 
       <div class="header">Pressure</div>
       <div class="description">
-        <p>{{_station.summary.pressure}} hPa</p>
-        <p>Max: {{_station.summary.maxPressure}}</p>
-        <i class="right floated blue {{_trendingVals?.pressTrend}}"></i>
-        <p>Min: {{_station.summary.minPressure}}</p>
+        <p>{{summary.pressure}} hPa</p>
+        <p>Max: {{summary.maxPressure}}</p>
+        <i class="right floated blue {{summary.pressTrend}}"></i>
+        <p>Min: {{summary.minPressure}}</p>
       </div>
     </div>
   </div>
-  #{/if}
 </div>
 
