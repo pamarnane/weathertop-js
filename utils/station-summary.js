@@ -223,30 +223,35 @@ const stationSummary = {
       windAvg = sumWind/3;
       pressAvg = sumTemp/3;
 
-    }
 
-    if (tempAvg > station.readings[station.readings.length - 4].temperature) {
-      arrTrends[0] = "arrow up icon";
-    } else if (tempAvg < station.readings[station.readings.length - 4].temperature) {
-      arrTrends[0] = "arrow down icon";
-    } else {
-      arrTrends[0] = "arrows alternate horizontal icon";
-    }
 
-    if (windAvg > station.readings[station.readings.length - 4].windSpeed) {
-      arrTrends[1] = "arrow up icon";
-    } else if (windAvg < station.readings[station.readings.length - 4].windSpeed) {
-      arrTrends[1] = "arrow down icon";
-    } else {
-      arrTrends[1] = "arrows alternate horizontal icon";
-    }
+      if (tempAvg > station.readings[station.readings.length - 4].temperature) {
+        arrTrends[0] = "arrow up icon";
+      } else if (tempAvg < station.readings[station.readings.length - 4].temperature) {
+        arrTrends[0] = "arrow down icon";
+      } else {
+        arrTrends[0] = "arrows alternate horizontal icon";
+      }
 
-    if (pressAvg > station.readings[station.readings.length - 4].pressure) {
-      arrTrends[2] = "arrow up icon";
-    } else if (pressAvg < station.readings[station.readings.length - 4].pressure) {
-      arrTrends[2] = "arrow down icon";
-    } else {
-      arrTrends[2] = "arrows alternate horizontal icon";
+      if (windAvg > station.readings[station.readings.length - 4].windSpeed) {
+        arrTrends[1] = "arrow up icon";
+      } else if (windAvg < station.readings[station.readings.length - 4].windSpeed) {
+        arrTrends[1] = "arrow down icon";
+      } else {
+        arrTrends[1] = "arrows alternate horizontal icon";
+      }
+
+      if (pressAvg > station.readings[station.readings.length - 4].pressure) {
+        arrTrends[2] = "arrow up icon";
+      } else if (pressAvg < station.readings[station.readings.length - 4].pressure) {
+        arrTrends[2] = "arrow down icon";
+      } else {
+        arrTrends[2] = "arrows alternate horizontal icon";
+      }
+
+    }
+    else {
+      arrTrends = {}
     }
 
     return arrTrends;

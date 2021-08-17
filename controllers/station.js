@@ -36,6 +36,7 @@ const station = {
     const stationId = request.params.id;
     const station = stationStore.getStation(stationId);
     const currentTime = new Date();
+
     const newReading = {
       id: uuid.v1(),
       code: Number(request.body.code),
@@ -43,11 +44,11 @@ const station = {
       windSpeed: Number(request.body.windSpeed),
       pressure: Number(request.body.pressure),
       windDirection: Number(request.body.windDirection),
-      date: currentTime,
+      date: currentTime
     };
     stationStore.addReading(stationId, newReading);
-    //stationStore.updateSummary(stationId);
     response.redirect('/station/' + stationId);
+
   },
 };
 

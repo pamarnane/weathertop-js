@@ -21,7 +21,7 @@ const accounts = {
   },
 
   logout(request, response) {
-    response.cookie('playlist', '');
+    response.cookie('station', '');
     response.redirect('/');
   },
 
@@ -34,10 +34,27 @@ const accounts = {
 
   register(request, response) {
     const user = request.body;
-    user.id = uuid.v1();
-    userstore.addUser(user);
-    logger.info(`registering ${user.email}`);
-    response.redirect('/');
+
+    if (userstore.getUserByEmail(request.body.email) == undefined) {
+
+      user.id = uuid.v1();
+      userstore.addUser(user);
+      logger.info(`registering ${user.email}`);
+      response.redirect('/login');
+
+    }
+
+    else {
+      const viewData = {
+        message: 'Email address has an existing account, please log in.'
+      }
+      response.render('login', viewData);
+    }
+
+
+
+
+
   },
 
   authenticate(request, response) {

@@ -20,6 +20,11 @@ const stationStore = {
   getUserStations(userid) {
     return this.store.findBy(this.collection, { userid: userid });
   },
+
+  getUserStationsAlpha(userid) {
+    const userStations = this.store.findBy(this.collection, { userid: userid });
+    return _.sortBy(userStations, 'location');
+  },
   
   addStation(station) {
     this.store.add(this.collection, station);
@@ -40,14 +45,6 @@ const stationStore = {
   addReading(id, reading) {
     const station = this.getStation(id);
     station.readings.push(reading);
-
-/*    let duration = 0;
-    for (let i = 0; i < playlist.songs.length; i++) {
-      duration += playlist.songs[i].duration;
-    }*/
-
-    // playlist.duration = duration;
-    
     this.store.save();
     this.updateSummary(id);
   },
