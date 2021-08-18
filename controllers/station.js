@@ -7,12 +7,32 @@ const stationSummary = require('../utils/station-summary.js');
 const axios = require("axios");
 
 const station = {
-  index(request, response) {
+  async index(request, response) {
     const stationId = request.params.id;
     logger.info('Playlist id = ' + stationId);
-    
+
     const station = stationStore.getStation(stationId);
     const summary = station.summary;
+
+    const lat = station.lat;
+    const lng = station.lng;
+    const requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&units=metric&appid=4782581fffcc0ff65757cd0c0d017b2e`
+    const result = await axios.get(requestUrl);
+
+    let tempTrend = [];
+    let humTrend = [];
+    let dewTrend = [];
+    let tempTrendLabels = [];
+
+    const trends = result.data.daily;
+
+    for (let i=0; i<trends.length; i++) {
+      tempTrend.push(trends[i].temp.day);
+      humTrend.push(trends[i].humidity);
+      dewTrend.push(trends[i].dew_point);
+      const date = new Date(trends[i].dt * 1000);
+      tempTrendLabels.push(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}` );
+    }
 
     const viewData = {
       title: station.location,
@@ -20,7 +40,11 @@ const station = {
       lat: station.lat,
       lng: station.lng,
       station: stationStore.getStation(stationId),
-      summary: summary
+      summary: summary,
+      chartTempValue: tempTrend,
+      chartHumValue: humTrend,
+      chartDewValue: dewTrend,
+      chartTempLabels: tempTrendLabels
     };
     response.render('station', viewData);
   },
@@ -59,13 +83,13 @@ const station = {
     const lat = station.lat;
     const lng = station.lng;
     const requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&units=metric&appid=4782581fffcc0ff65757cd0c0d017b2e`
-    // const requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=52.160858&lon=-7.152420&units=metric&appid=4782581fffcc0ff65757cd0c0d017b2e`
     const result = await axios.get(requestUrl);
 
      let autoReading = {}
 
     if (result.status == 200) {
-      const report = result.data.current;
+      let report = result.data.current;
+
       autoReading = {
         id: uuid.v1(),
         code: report.weather[0].id,
@@ -73,8 +97,9 @@ const station = {
         windSpeed: report.wind_speed,
         pressure: report.pressure,
         windDirection: report.wind_deg,
-        date: currentTime
+        date: currentTime,
       }
+      console.log(autoReading);
     }
     stationStore.addReading(stationId, autoReading);
     response.redirect('/station/' + stationId);

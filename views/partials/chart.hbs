@@ -1,0 +1,43 @@
+<div class="ui segment" id="chart"></div>
+<script>
+  data = {
+    labels: [
+      {{#each chartTempLabels}}
+        "{{this}}",
+      {{/each}}
+    ],
+    datasets: [
+      {
+        name: "Temperature", chartType: "line",
+        values: [
+          {{#each chartTempValue}}
+            {{this}},
+          {{/each}}
+        ]
+      },
+      {
+        name: "Humidity", chartType: "line",
+        values: [
+          {{#each chartHumValue}}
+            {{this}},
+          {{/each}}
+        ]
+      },
+      {
+        name: "Dew Point", type: "line",
+        values: [
+          {{#each chartDewValue}}
+            {{this}},
+          {{/each}}
+        ]
+      }
+    ]
+  }
+
+  new frappe.Chart("#chart", {
+    title: "Temperature, Humidity & Dew Point Trends",
+    data: data,
+    type: 'axis-mixed',
+    colors: ['blue', 'green', 'red']
+  })
+</script>

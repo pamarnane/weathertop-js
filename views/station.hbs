@@ -3,6 +3,7 @@
 <section class="ui segment">
   {{#if station.readings}}
   {{> stationcards}}
+  {{> chart}}
   {{> listreadings}}
 
 {{else}}
@@ -15,4 +16,6 @@
   <form action="/station/{{station.id}}/addautoreading" method="POST">
     <button class="ui red submit button">AutoGenerate Reading</button>
   </form>
+
+
 </section>
