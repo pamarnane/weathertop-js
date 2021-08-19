@@ -5,7 +5,7 @@
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "location": "Ennis",
       "lat": 52.8474,
-      "lng": 8.9887,
+      "lng": -8.9887,
       "readings": [
         {
           "id": "afce9980-ff93-11eb-bc43-93956c3b339c",
@@ -85,7 +85,7 @@
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "location": "Bansha",
       "lat": 52.4482,
-      "lng": 8.0643,
+      "lng": -8.0643,
       "readings": [
         {
           "id": "ab68b910-fcfb-11eb-a4ba-0b914355b0b5",
@@ -112,27 +112,7 @@
           "windSpeed": 5.95,
           "pressure": 1012,
           "windDirection": 240,
-          "date": "2021-08-18T17:45:47.669Z",
-          "chartTrendTemp": [
-            17.13,
-            17.01,
-            18.9,
-            23.45,
-            18.3,
-            17.87,
-            16.95,
-            12.15
-          ],
-          "chartTrendLabel": [
-            "18/7/2021",
-            "19/7/2021",
-            "20/7/2021",
-            "21/7/2021",
-            "22/7/2021",
-            "23/7/2021",
-            "24/7/2021",
-            "25/7/2021"
-          ]
+          "date": "2021-08-18T17:45:47.669Z"
         },
         {
           "id": "25788560-004d-11ec-aeaf-b379a03de5ec",
@@ -141,27 +121,7 @@
           "windSpeed": 5.95,
           "pressure": 1012,
           "windDirection": 240,
-          "date": "2021-08-18T17:53:08.048Z",
-          "chartTrendTemp": [
-            17.13,
-            17.01,
-            18.9,
-            23.45,
-            18.3,
-            17.87,
-            16.95,
-            12.15
-          ],
-          "chartTrendLabel": [
-            "18/7/2021",
-            "19/7/2021",
-            "20/7/2021",
-            "21/7/2021",
-            "22/7/2021",
-            "23/7/2021",
-            "24/7/2021",
-            "25/7/2021"
-          ]
+          "date": "2021-08-18T17:53:08.048Z"
         }
       ],
       "summary": {
@@ -183,94 +143,12 @@
       }
     },
     {
-      "id": "3b0bf290-fd28-11eb-82a2-dfb5343c855f",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "location": "Tipperary",
-      "lat": 54,
-      "lng": 8,
-      "readings": [
-        {
-          "id": "32bb7190-fd9d-11eb-9aca-0fa5d4c0b725",
-          "code": 100,
-          "temperature": 12,
-          "windSpeed": 5,
-          "pressure": 1001,
-          "windDirection": 187,
-          "date": "2021-08-15T07:48:36.777Z"
-        },
-        {
-          "id": "3a584bd0-fd9d-11eb-9aca-0fa5d4c0b725",
-          "code": 200,
-          "temperature": 23,
-          "windSpeed": 2,
-          "pressure": 999,
-          "windDirection": 234,
-          "date": "2021-08-15T07:48:49.549Z"
-        },
-        {
-          "id": "86aeebc0-fdc4-11eb-b2f7-6beaac3b1096",
-          "code": 100,
-          "temperature": 12,
-          "windSpeed": 12,
-          "pressure": 12,
-          "windDirection": 12,
-          "date": "2021-08-15T12:30:07.995Z"
-        },
-        {
-          "id": "8b8998c0-fdc4-11eb-b2f7-6beaac3b1096",
-          "code": 100,
-          "temperature": 12,
-          "windSpeed": 12,
-          "pressure": 12,
-          "windDirection": 12,
-          "date": "2021-08-15T12:30:16.140Z"
-        }
-      ],
-      "summary": {
-        "weatherDesc": "Clear",
-        "weatherIcon": "sun icon",
-        "tempC": 12,
-        "maxTempC": 23,
-        "minTempC": 12,
-        "tempF": 53.6,
-        "windBft": 3,
-        "windDirectionString": "North North East",
-        "windChill": 7.12,
-        "maxWindSpd": 12,
-        "minWindSpd": 2,
-        "pressure": 12,
-        "maxPressure": 1001,
-        "minPressure": 12,
-        "tempTrend": "arrow up icon",
-        "windTrend": "arrow up icon",
-        "pressTrend": "arrow up icon"
-      }
-    },
-    {
       "id": "a2901ce0-0050-11ec-9780-e30d6d9d6d82",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "location": "Tramore",
       "lat": 52.1614,
-      "lng": 7.1493,
+      "lng": -7.1493,
       "readings": [
-        {
-          "id": "a52805d0-0050-11ec-9780-e30d6d9d6d82",
-          "code": 100,
-          "temperature": 0,
-          "windSpeed": 0,
-          "pressure": 0,
-          "windDirection": 0,
-          "date": "2021-08-18T18:18:10.989Z"
-        },
-        {
-          "id": "acc0c160-0050-11ec-9780-e30d6d9d6d82",
-          "code": 100,
-          "temperature": 0,
-          "windSpeed": 0,
-          "pressure": 0,
-          "windDirection": 0,
-          "date": "2021-08-18T18:18:23.734Z"
-        },
         {
           "id": "17583350-0051-11ec-9f56-c12b2c3580ea",
           "code": 804,
@@ -302,19 +180,16 @@
       "summary": {
         "tempC": 17.66,
         "maxTempC": 17.66,
-        "minTempC": 0,
+        "minTempC": 17.66,
         "tempF": 63.79,
         "windBft": 2,
         "windDirectionString": "West South West",
         "windChill": 9.27,
         "maxWindSpd": 5.41,
-        "minWindSpd": 0,
+        "minWindSpd": 5.41,
         "pressure": 1012,
         "maxPressure": 1012,
-        "minPressure": 0,
-        "tempTrend": "arrow up icon",
-        "windTrend": "arrow up icon",
-        "pressTrend": "arrow up icon"
+        "minPressure": 1012
       }
     }
   ]

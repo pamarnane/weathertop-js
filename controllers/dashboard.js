@@ -4,16 +4,28 @@ const logger = require("../utils/logger");
 const stationStore = require('../models/station-store.js');
 const uuid = require('uuid');
 const accounts = require ('./accounts.js');
-const stationSummary = require("../utils/station-summary");
 
 const dashboard = {
   index(request, response) {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
+    const stations = stationStore.getUserStationsAlpha(loggedInUser.id)
+    let mapLat, lat = 0;
+    let mapLng, lng = 0;
+
+    for (let i = 0; i < stations.length; i++ ){
+      lat += stations[i].lat;
+      lng += stations[i].lng
+    }
+
+    mapLat = lat/stations.length;
+    mapLng = lng/stations.length;
 
     const viewData = {
       title: "Station Dashboard",
-      stations: stationStore.getUserStationsAlpha(loggedInUser.id),
+      stations: stations,
+      mapLat: mapLat,
+      mapLng: mapLng
     };
 
     logger.info('about to render', stationStore.getUserStations(loggedInUser.id));
