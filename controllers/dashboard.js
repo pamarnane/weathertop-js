@@ -34,7 +34,7 @@ const dashboard = {
   
   deleteStation(request, response) {
     const stationId = request.params.id;
-    logger.info(`Deleting Playlist ${stationId}`);
+    logger.info(`Deleting Station ${stationId}`);
     stationStore.removeStation(stationId);
     response.redirect('/dashboard');
   },

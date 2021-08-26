@@ -12,11 +12,22 @@ const exphbs = require("express-handlebars");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("public"));
 app.use(fileUpload());
+
 app.engine(
   ".hbs",
   exphbs({
     extname: ".hbs",
-    defaultLayout: "main"
+    defaultLayout: "main",
+      helpers: {
+      checkLength: function(v1, v2, options) {
+        if (v1 === v2) {
+          return options.fn(this);
+        }
+        else {
+          return options.inverse(this);
+        }
+      }
+    }
   })
 );
 app.set("view engine", ".hbs");

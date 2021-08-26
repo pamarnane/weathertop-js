@@ -1,7 +1,7 @@
 <div class="ui blue five cards">
   <div class="ui background card" style="background-color: #0000000d">
     <div class="content">
-      <i class="right floated huge green compass icon"></i>
+      <i class="right floated large green compass icon"></i>
       <div class="header">{{location}}</div>
       <div class="description">
         <p name = "lat">Lat: {{lat}}</p>
@@ -12,8 +12,12 @@
   </div>
   <div class="ui card" style="background-color: #0000000d">
     <div class="content">
-      <i class="right floated huge red {{summary.weatherIcon}}"></i>
       <div class="header">Weather</div>
+      {{#checkLength summary.weatherIcon.length 3}}
+        <img class="ui centred floated image" src="http://openweathermap.org/img/wn/{{summary.weatherIcon}}@2x.png">
+      {{else}}
+        <i class="right floated huge red {{summary.weatherIcon}}"></i>
+{{/checkLength}}
       <div class="description">
         <p>{{summary.weatherDesc}}</p>
       </div>
@@ -21,7 +25,7 @@
   </div>
   <div class="ui card" style="background-color: #0000000d">
     <div class="content">
-      <i class="right floated huge yellow temperature low icon"></i>
+      <i class="right floated large yellow temperature low icon"></i>
       <div class="header">Temp</div>
       <div class="description">
         <p>{{summary.tempC}} degC</p>
@@ -35,7 +39,7 @@
   </div>
   <div class="ui card" style="background-color: #0000000d">
     <div class="content">
-      <i class="right floated grey huge wind icon"></i>
+      <i class="right floated grey large wind icon"></i>
       <div class="header">Wind</div>
       <div class="description">
         <p>{{summary.windBft}} bft</p>
@@ -49,7 +53,7 @@
   </div>
   <div class="ui card" style="background-color: #0000000d">
     <div class="content">
-      <i class="right floated blue huge globe icon"></i>
+      <i class="right floated blue large globe icon"></i>
 
       <div class="header">Pressure</div>
       <div class="description">
@@ -61,4 +65,5 @@
     </div>
   </div>
 </div>
+
 

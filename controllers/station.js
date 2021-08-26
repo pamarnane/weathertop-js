@@ -4,12 +4,13 @@ const logger = require('../utils/logger');
 const stationStore = require('../models/station-store.js');
 const uuid = require('uuid');
 const stationSummary = require('../utils/station-summary.js');
+const getTStamp = require('../utils/timestamp.js')
 const axios = require("axios");
 
 const station = {
   async index(request, response) {
     const stationId = request.params.id;
-    logger.info('Playlist id = ' + stationId);
+    logger.info('Station id = ' + stationId);
 
     const station = stationStore.getStation(stationId);
     const summary = station.summary;
@@ -52,7 +53,7 @@ const station = {
   deleteReading(request, response) {
     const stationId = request.params.id;
     const readingId = request.params.readingid;
-    logger.info(`Deleting Song ${readingId} from Playlist ${stationId}`);
+    logger.info(`Deleting Reading ${readingId} from Station ${stationId}`);
     stationStore.removeReading(stationId, readingId);
     response.redirect('/station/' + stationId);
   },
@@ -60,7 +61,7 @@ const station = {
    addReading(request, response) {
     const stationId = request.params.id;
     const station = stationStore.getStation(stationId);
-    const currentTime = new Date();
+    const tStamp = getTStamp.genTStamp(new Date());
 
     const newReading = {
       id: uuid.v1(),
@@ -69,7 +70,7 @@ const station = {
       windSpeed: Number(request.body.windSpeed),
       pressure: Number(request.body.pressure),
       windDirection: Number(request.body.windDirection),
-      date: currentTime
+      date: tStamp
     };
     stationStore.addReading(stationId, newReading);
     response.redirect('/station/' + stationId);
@@ -79,11 +80,12 @@ const station = {
    async addAutoReading(request, response) {
     const stationId = request.params.id;
     const station = stationStore.getStation(stationId);
-    const currentTime = new Date();
     const lat = station.lat;
     const lng = station.lng;
     const requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&units=metric&appid=4782581fffcc0ff65757cd0c0d017b2e`
     const result = await axios.get(requestUrl);
+
+     const tStamp = getTStamp.genTStamp(new Date());
 
      let autoReading = {}
 
@@ -93,11 +95,13 @@ const station = {
       autoReading = {
         id: uuid.v1(),
         code: report.weather[0].id,
+        icon: report.weather[0].icon,
+        description: report.weather[0].description[0].toUpperCase() + report.weather[0].description.substring(1),
         temperature:  report.temp,
         windSpeed: report.wind_speed,
         pressure: report.pressure,
         windDirection: report.wind_deg,
-        date: currentTime,
+        date: tStamp,
       }
       console.log(autoReading);
     }

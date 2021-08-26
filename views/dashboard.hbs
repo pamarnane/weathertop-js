@@ -2,7 +2,9 @@
 
 <section class="ui segment">
   {{> liststations}}
-  <div id="weathertop-map" style="width: 900px; height: 400px;"></div>
+  {{#if stations}}
+    <div id="weathertop-map" style="width: 900px; height: 400px;"></div>
+  {{/if}}
   {{> addstation}}
 </section>
 

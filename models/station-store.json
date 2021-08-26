@@ -60,24 +60,46 @@
           "pressure": 1011,
           "windDirection": 249,
           "date": "2021-08-18T18:20:52.491Z"
+        },
+        {
+          "id": "401d66a0-06a2-11ec-a534-65aa56c531e5",
+          "code": 801,
+          "icon": "02d",
+          "description": "Few clouds",
+          "temperature": 22.98,
+          "windSpeed": 2.06,
+          "pressure": 1023,
+          "windDirection": 270,
+          "date": "2021-08-26T19:17:27.067Z"
+        },
+        {
+          "id": "451f23a0-06a2-11ec-a534-65aa56c531e5",
+          "code": 100,
+          "temperature": 2,
+          "windSpeed": 2,
+          "pressure": 2,
+          "windDirection": 2,
+          "date": "2021-08-26T19:17:35.578Z"
         }
       ],
       "summary": {
-        "tempC": 18.36,
+        "tempC": 2,
         "maxTempC": 32.43,
-        "minTempC": 14.99,
-        "tempF": 65.05,
-        "windBft": 2,
-        "windDirectionString": "West South West",
-        "windChill": 9.72,
+        "minTempC": 2,
+        "tempF": 35.6,
+        "windBft": 1,
+        "windDirectionString": "",
+        "windChill": 0.9,
         "maxWindSpd": 5.73,
-        "minWindSpd": 4.5,
-        "pressure": 1011,
-        "maxPressure": 1013,
-        "minPressure": 1007,
+        "minWindSpd": 2,
+        "pressure": 2,
+        "maxPressure": 1023,
+        "minPressure": 2,
         "tempTrend": "arrow up icon",
-        "windTrend": "arrow up icon",
-        "pressTrend": "arrow up icon"
+        "windTrend": "arrow down icon",
+        "pressTrend": "arrow down icon",
+        "weatherDesc": "Clear",
+        "weatherIcon": "sun icon"
       }
     },
     {
@@ -122,24 +144,264 @@
           "pressure": 1012,
           "windDirection": 240,
           "date": "2021-08-18T17:53:08.048Z"
+        },
+        {
+          "id": "833d0110-0518-11ec-99dd-b104ee0de254",
+          "code": 800,
+          "icon": "01n",
+          "description": "Clear sky",
+          "temperature": 16.53,
+          "windSpeed": 2.12,
+          "pressure": 1030,
+          "windDirection": 114,
+          "date": "2021-08-24T20:18:57.977Z"
+        },
+        {
+          "id": "4e93c3e0-051d-11ec-8adb-198b8080018f",
+          "code": 100,
+          "temperature": 8,
+          "windSpeed": 8,
+          "pressure": 8,
+          "windDirection": 8,
+          "date": "2021-08-24T20:53:17.213Z"
+        },
+        {
+          "id": "2d1f0c50-051e-11ec-9c1a-75e63aac70b7",
+          "code": 100,
+          "temperature": 1,
+          "windSpeed": 1,
+          "pressure": 1,
+          "windDirection": 1,
+          "date": "2021-08-24T20:59:28.490Z"
+        },
+        {
+          "id": "9aa62420-051e-11ec-9c1a-75e63aac70b7",
+          "code": 100,
+          "temperature": 4,
+          "windSpeed": 4,
+          "pressure": 4,
+          "windDirection": 4,
+          "date": "2021-08-24T21:02:34.338Z"
+        },
+        {
+          "id": "d17bec00-051e-11ec-ba7b-6d13846cf977",
+          "code": 100,
+          "temperature": 4,
+          "windSpeed": 4,
+          "pressure": 4,
+          "windDirection": 4,
+          "date": "2021-08-24T21:04:06.336Z"
+        },
+        {
+          "id": "dbd722f0-051e-11ec-8ba1-6b9ff1f8d77f",
+          "code": 100,
+          "temperature": 4,
+          "windSpeed": 4,
+          "pressure": 4,
+          "windDirection": 4,
+          "date": "2021-08-24T21:04:23.711Z"
+        },
+        {
+          "id": "02453da0-051f-11ec-8ba1-6b9ff1f8d77f",
+          "code": 100,
+          "temperature": 0,
+          "windSpeed": 0,
+          "pressure": 23432,
+          "windDirection": 0,
+          "date": "2021-08-24T21:05:28.186Z"
+        },
+        {
+          "id": "9d269800-051f-11ec-8ba1-6b9ff1f8d77f",
+          "code": 800,
+          "icon": "01n",
+          "description": "Clear sky",
+          "temperature": 16.03,
+          "windSpeed": 2.04,
+          "pressure": 1031,
+          "windDirection": 108,
+          "date": "2021-08-24T21:09:47.900Z"
+        },
+        {
+          "id": "a3957990-051f-11ec-8ba1-6b9ff1f8d77f",
+          "code": 800,
+          "icon": "01n",
+          "description": "Clear sky",
+          "temperature": 16.03,
+          "windSpeed": 2.04,
+          "pressure": 1031,
+          "windDirection": 108,
+          "date": "2021-08-24T21:09:58.719Z"
+        },
+        {
+          "id": "b012f440-051f-11ec-8ba1-6b9ff1f8d77f",
+          "code": 800,
+          "icon": "01n",
+          "description": "Clear sky",
+          "temperature": 16.03,
+          "windSpeed": 2.04,
+          "pressure": 1031,
+          "windDirection": 108,
+          "date": "2021-08-24T21:10:19.665Z"
+        },
+        {
+          "id": "f8b68900-051f-11ec-8ba1-6b9ff1f8d77f",
+          "code": 800,
+          "icon": "01n",
+          "description": "Clear sky",
+          "temperature": 16.03,
+          "windSpeed": 2.04,
+          "pressure": 1031,
+          "windDirection": 108,
+          "date": "2021-08-24T21:12:21.544Z"
+        },
+        {
+          "id": "1bb127d0-0520-11ec-9d5f-d932535cc766",
+          "code": 100,
+          "temperature": 1,
+          "windSpeed": 1,
+          "pressure": 1,
+          "windDirection": 1,
+          "date": "2021-08-24T21:13:20.332Z"
+        },
+        {
+          "id": "34f4a680-06a2-11ec-a534-65aa56c531e5",
+          "code": 800,
+          "icon": "01d",
+          "description": "Clear sky",
+          "temperature": 21.86,
+          "windSpeed": 0.33,
+          "pressure": 1023,
+          "windDirection": 213,
+          "date": "2021-08-26T19:17:08.342Z"
+        },
+        {
+          "id": "9c6d9a60-06a2-11ec-ad3a-03dbb5e5f61b",
+          "code": 100,
+          "temperature": 5,
+          "windSpeed": 5,
+          "pressure": 5,
+          "windDirection": 5,
+          "date": "2021-08-26T19:20:02.054Z"
+        },
+        {
+          "id": "a21beb10-06a2-11ec-ad3a-03dbb5e5f61b",
+          "code": 800,
+          "icon": "01d",
+          "description": "Clear sky",
+          "temperature": 21.85,
+          "windSpeed": 0.33,
+          "pressure": 1023,
+          "windDirection": 213,
+          "date": "2021-08-26T19:20:11.443Z"
+        },
+        {
+          "id": "2f0b2c20-06a3-11ec-ad3a-03dbb5e5f61b",
+          "code": 100,
+          "temperature": 0,
+          "windSpeed": 0,
+          "pressure": 0,
+          "windDirection": 0,
+          "date": "2021-08-26T19:23:59.034Z"
+        },
+        {
+          "id": "3f888ec0-06a4-11ec-be43-cbe1b907cd77",
+          "code": 100,
+          "temperature": 0,
+          "windSpeed": 0,
+          "pressure": 0,
+          "windDirection": 0,
+          "date": 1630006299559
+        },
+        {
+          "id": "0c20f620-06a5-11ec-a9d4-3d41f4bcbe23",
+          "code": 100,
+          "temperature": 0,
+          "windSpeed": 0,
+          "pressure": 0,
+          "windDirection": 0,
+          "date": "2021-7-26T20-37-25-543"
+        },
+        {
+          "id": "b0551820-06a5-11ec-81ab-51111cf9bc3d",
+          "code": 100,
+          "temperature": 0,
+          "windSpeed": 0,
+          "pressure": 0,
+          "windDirection": 0,
+          "date": "2021-08-26T20-41-48-148"
+        },
+        {
+          "id": "bdebcb00-06a5-11ec-a498-c961cfece1e9",
+          "code": 800,
+          "icon": "01n",
+          "description": "Clear sky",
+          "temperature": 20.9,
+          "windSpeed": 0.84,
+          "pressure": 1023,
+          "windDirection": 221,
+          "date": "2021-08-26T19:42:26.556Z"
+        },
+        {
+          "id": "7925aca0-06a7-11ec-ad29-595b241ebfc1",
+          "code": 800,
+          "icon": "01n",
+          "description": "Clear sky",
+          "temperature": 20.26,
+          "windSpeed": 0.84,
+          "pressure": 1023,
+          "windDirection": 221,
+          "date": "2021-08-26T19:54:50.086Z"
+        },
+        {
+          "id": "828df810-06a7-11ec-ad29-595b241ebfc1",
+          "code": 100,
+          "temperature": 0,
+          "windSpeed": 0,
+          "pressure": 0,
+          "windDirection": 0,
+          "date": "2021-08-26T20:55:4.535"
+        },
+        {
+          "id": "daa22fd0-06a7-11ec-ad29-595b241ebfc1",
+          "code": 800,
+          "icon": "01n",
+          "description": "Clear sky",
+          "temperature": 20.13,
+          "windSpeed": 0.84,
+          "pressure": 1023,
+          "windDirection": 221,
+          "date": "2021-08-26T19:57:33.701Z"
+        },
+        {
+          "id": "e75fc0c0-06a7-11ec-b063-719f62758074",
+          "code": 800,
+          "icon": "01n",
+          "description": "Clear sky",
+          "temperature": 20.13,
+          "windSpeed": 0.84,
+          "pressure": 1023,
+          "windDirection": 221,
+          "date": "2021-08-26T20:57:55.272"
         }
       ],
       "summary": {
-        "tempC": 18.22,
+        "tempC": 20.13,
         "maxTempC": 32,
-        "minTempC": 12,
-        "tempF": 64.8,
-        "windBft": 2,
-        "windDirectionString": "West South West",
-        "windChill": 9.7,
+        "minTempC": 0,
+        "tempF": 68.23,
+        "windBft": 0,
+        "windDirectionString": "South West",
+        "windChill": 7.91,
         "maxWindSpd": 32,
-        "minWindSpd": 5.95,
-        "pressure": 1012,
-        "maxPressure": 1012,
-        "minPressure": 12,
+        "minWindSpd": 0,
+        "pressure": 1023,
+        "maxPressure": 23432,
+        "minPressure": 0,
         "tempTrend": "arrow up icon",
         "windTrend": "arrow down icon",
-        "pressTrend": "arrow down icon"
+        "pressTrend": "arrow down icon",
+        "weatherDesc": "Clear sky",
+        "weatherIcon": "01n"
       }
     },
     {
@@ -190,6 +452,119 @@
         "pressure": 1012,
         "maxPressure": 1012,
         "minPressure": 1012
+      }
+    },
+    {
+      "id": "2ac02b50-038a-11ec-9a54-792482835e86",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "location": "Brisbane",
+      "lat": -27.470125,
+      "lng": 153.021072,
+      "readings": [
+        {
+          "id": "30718940-038a-11ec-9a54-792482835e86",
+          "code": 741,
+          "temperature": 14.05,
+          "windSpeed": 0.45,
+          "pressure": 1021,
+          "windDirection": 255,
+          "date": "2021-08-22T20:47:39.346Z"
+        },
+        {
+          "id": "6e12bfb0-038c-11ec-ba6a-1100b7fc7d86",
+          "code": 741,
+          "temperature": 14.16,
+          "windSpeed": 0.89,
+          "pressure": 1021,
+          "windDirection": 252,
+          "date": "2021-08-22T21:03:41.765Z"
+        },
+        {
+          "id": "ebc9f9f0-038c-11ec-aef3-932726ca8ded",
+          "code": 801,
+          "temperature": 14.33,
+          "windSpeed": 2.57,
+          "pressure": 1021,
+          "windDirection": 210,
+          "date": "2021-08-22T21:07:12.567Z"
+        },
+        {
+          "id": "7fa76940-038e-11ec-bc47-6b7d8453dfbe",
+          "code": 801,
+          "icon": "02d",
+          "description": "few clouds",
+          "temperature": 14.64,
+          "windSpeed": 0.45,
+          "pressure": 1021,
+          "windDirection": 354,
+          "date": "2021-08-22T21:18:30.144Z"
+        },
+        {
+          "id": "7e60f150-0514-11ec-acbd-691e9001e3e3",
+          "code": 500,
+          "icon": "10n",
+          "description": "Light rain",
+          "temperature": 9.76,
+          "windSpeed": 0.45,
+          "pressure": 1015,
+          "windDirection": 240,
+          "date": "2021-08-24T19:50:11.744Z"
+        }
+      ],
+      "summary": {
+        "tempC": 9.76,
+        "maxTempC": 14.64,
+        "minTempC": 9.76,
+        "tempF": 49.57,
+        "windBft": 0,
+        "windDirectionString": "West South West",
+        "windChill": 3.5,
+        "maxWindSpd": 2.57,
+        "minWindSpd": 0.45,
+        "pressure": 1015,
+        "maxPressure": 1021,
+        "minPressure": 1015,
+        "tempTrend": "arrow up icon",
+        "windTrend": "arrow up icon",
+        "pressTrend": "arrow up icon",
+        "weatherDesc": "Light rain",
+        "weatherIcon": "10n"
+      }
+    },
+    {
+      "id": "0aa3e570-0518-11ec-99dd-b104ee0de254",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "location": "Sydney",
+      "lat": -33.865143,
+      "lng": 151.2099,
+      "readings": [
+        {
+          "id": "503223e0-0518-11ec-99dd-b104ee0de254",
+          "code": 803,
+          "icon": "04n",
+          "description": "Broken clouds",
+          "temperature": 9.1,
+          "windSpeed": 1.34,
+          "pressure": 1007,
+          "windDirection": 172,
+          "date": "2021-08-24T20:17:32.337Z"
+        }
+      ],
+      "summary": {
+        "weatherDesc": "Broken clouds",
+        "weatherIcon": "04n",
+        "tempC": 9.1,
+        "maxTempC": 9.16,
+        "minTempC": 9.1,
+        "tempF": 48.38,
+        "windBft": 1,
+        "windDirectionString": "South",
+        "windChill": 3.85,
+        "maxWindSpd": 1.34,
+        "minWindSpd": 1.34,
+        "pressure": 1007,
+        "maxPressure": 1007,
+        "minPressure": 1007
       }
     }
   ]
