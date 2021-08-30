@@ -74,11 +74,9 @@ const stationStore = {
     const station = this.getStation(id);
     const i = station.readings.length - 1;
 
-    if (i >= 1) {
+    if (station.readings.length >= 1) {
     station.summary.minTempC = stationSummary.getMinTemp(station);
     station.summary.maxTempC = stationSummary.getMaxTemp(station);
-   // station.summary.weatherDesc = stationSummary.getWeatherString(station);
-   // station.summary.weatherIcon = stationSummary.getWeatherIconMap(station);
       if (station.readings[i].description) {
         station.summary.weatherDesc = station.readings[i].description;
         station.summary.weatherIcon = station.readings[i].icon;
