@@ -32,7 +32,7 @@ const station = {
       humTrend.push(trends[i].humidity);
       dewTrend.push(trends[i].dew_point);
       const date = new Date(trends[i].dt * 1000);
-      tempTrendLabels.push(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}` );
+      tempTrendLabels.push(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}` );
     }
 
     const viewData = {
